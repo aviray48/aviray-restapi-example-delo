@@ -11,9 +11,9 @@ import ray.avi.common.util.UtilMethods;
 
 @Configuration
 @Aspect
-public class AppAspect {
+public class ExampleAppAspect {
 
-	Logger logger = LoggerFactory.getLogger(AppAspect.class);
+	Logger logger = LoggerFactory.getLogger(ExampleAppAspect.class);
 
 	@Around("execution(* ray.avi.example.controller.*.*(..)) || execution(* ray.avi.example.service.*.*(..))")
 	public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
